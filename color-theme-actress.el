@@ -1,4 +1,4 @@
-;;; color-theme-actress.el --- A color theme for GNU Emacs.
+;;; color-theme-actress.el --- A dark color theme for GNU Emacs.
 
 ;; Copyright (C) 2011 Inderjit Gill <email@indy.io>
 
@@ -27,35 +27,17 @@
 ;; Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 ;; MA 02111-1307, USA.
 
+;;; Usage:
+
+;; 1. Install the color-theme package
+;;   (http://www.emacswiki.org/cgi-bin/wiki/ColorTheme)
+;; 2. Load this file
+;; 3. M-x color-theme-actress
+
 ;;; Code:
 
 ;; color theme (requires http://www.emacswiki.org/cgi-bin/wiki?ColorTheme )
 (require 'color-theme)
-
-; orange/red -> functions, variables
-; turquoise -> keyword, builtin,
-; green -> strings comments
-;          note: move type from greens into turquoise?
-; greys
-; blacks
-
-; pinks/reds == errors and warnings
-; 
-; font-lock-builtin-face
-; font-lock-comment-delimiter-face
-; font-lock-comment-face 	
-; font-lock-constant-face 	
-; font-lock-doc-face 	
-; font-lock-keyword-face
-; font-lock-function-name-face
-; font-lock-negation-char-face
-; font-lock-preprocessor-face
-; font-lock-reference-face
-; font-lock-string-face
-; font-lock-type-face
-; font-lock-variable-name-face
-; font-lock-warning-face
-
 
 (defun color-theme-actress ()
   "Actress color theme for GNU Emacs."
@@ -116,11 +98,9 @@
        (bold-italic ((t (:italic t :bold t))))
        (underline ((t (:underline t))))
 
-       (css-property ((t (:foreground "#0086b3"))));
-       (css-selector ((t (:foreground "#990000"))));
+       (css-property ((t (:foreground ,alpha-comp2))))
+       (css-selector ((t (:foreground ,beta-comp-2))))
 
-       (c-annotation-face ((t (:foreground ,alpha-pound2))))
-       
        ;; font lock
        ;;
        (font-lock-builtin-face ((t (:foreground ,alpha-comp2))))
@@ -138,7 +118,7 @@
 ; font-lock-preprocessor-face
 ; font-lock-reference-face
        (font-lock-string-face ((t (:foreground ,beta))))
-       (font-lock-type-face ((t (:foreground ,beta-comp1))))
+       (font-lock-type-face ((t (:foreground ,beta-comp2))))
        (font-lock-variable-name-face ((t (:foreground ,alpha-triad-1))))
        (font-lock-warning-face ((t (:bold t :foreground ,beta-triad2))))
 
@@ -167,47 +147,3 @@
 (provide 'color-theme-actress)
 
 ;;; color-theme-actress.el ends here
-
-
-       ;; diff
-;     (diff-added ((t (:foreground ,green :inverse-video t))))
-;     (diff-changed ((t (:foreground ,yellow :inverse-video t))))
-;     (diff-removed ((t (:foreground ,red :inverse-video t))))
-
-       ;; org
-;     (org-agenda-date-today
-;     ((t (:foreground "white" :slant italic :weight bold))) t
-;     )
-;     (org-agenda-structure
-;     ((t (:inherit font-lock-comment-face)))
-;     )
-;    (org-archived ((t (:foreground ,zenburn-fg :weight bold))))
-;     (org-checkbox ((t (:background ,zenburn-bg+2 :foreground "white"
-;                                   :box (:line-width 1 :style
-;     released-button)
-;     ))))
-;    (org-date ((t (:foreground ,zenburn-blue :underline t))))
-;    (org-deadline-announce ((t (:foreground ,zenburn-red-1))))
-;    (org-done ((t (:bold t :weight bold :foreground ,zenburn-green+3))))
-;    (org-formula ((t (:foreground ,zenburn-yellow-2))))
-;    (org-headline-done ((t (:foreground ,zenburn-green+3))))
-;    (org-hide ((t (:foreground ,zenburn-bg-1))))
-;    (org-level-1 ((t (:foreground ,zenburn-orange))))
-;    (org-level-2 ((t (:foreground ,zenburn-green+1))))
-;    (org-level-3 ((t (:foreground ,zenburn-blue-1))))
-;    (org-level-4 ((t (:foreground ,zenburn-yellow-2))))
-;    (org-level-5 ((t (:foreground ,zenburn-cyan))))
-;    (org-level-6 ((t (:foreground ,zenburn-green-1))))
-;    (org-level-7 ((t (:foreground ,zenburn-red-4))))
-;    (org-level-8 ((t (:foreground ,zenburn-blue-4))))
-;    (org-link ((t (:foreground ,zenburn-yellow-2 :underline t))))
-;    (org-scheduled ((t (:foreground ,zenburn-green+4))))
-;    (org-scheduled-previously ((t (:foreground ,zenburn-red-4))))
-;    (org-scheduled-today ((t (:foreground ,zenburn-blue+1))))
-;    (org-special-keyword ((t (:foreground ,zenburn-yellow-1))))
-;    (org-table ((t (:foreground ,zenburn-green+2))))
-;    (org-tag ((t (:bold t :weight bold))))
-;    (org-time-grid ((t (:foreground ,zenburn-orange))))
-;    (org-todo ((t (:bold t :foreground ,zenburn-red :weight bold))))
-;    (org-upcoming-deadline ((t (:inherit font-lock-keyword-face))))
-;    (org-warning ((t (:bold t :foreground ,zenburn-red :weight bold))))     
