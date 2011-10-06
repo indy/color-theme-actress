@@ -65,23 +65,40 @@
         (bg-hi2 "#333333")    ; default background-extra-highlighted
         (fg "#999999")        ; default foreground
         (fg-hi "#ffffff")     ; default foreground-highlighted
-        (secondary "#2f4f4f")  ; secondary elements (e.g. comments)
 
-        (olive "#a2cd5a")     ; "DarkOliveGreen3"
-        (builtin "#b0c4de")   ; "LightSteelBlue"
-        (function "#b22222")  ; "firebrick"
-        (keyword "#00c5cd")   ; "turquoise3"
-        (warning "#ffc0cb")   ; "Pink"
-        (string "#2e8b57")    ; "SeaGreen"
-        (type "#98fb98")      ; "PaleGreen"
-        (variable "#e79a32")  ; "peru"
-        (err "#ff0000"))
+        (alpha "#2f4f4f")
+        (alpha-comp1 "#4D9B9B")
+        (alpha-comp2 "#6C9B9B")
+        (alpha-comp-1 "#9B603D")
+        (alpha-comp-2 "#4F3B2F")
+        (alpha-triad1 "#4D9B9B")
+        (alpha-triad2 "#5C4054")
+        (alpha-triad-1 "#827840")
+        (alpha-triad-2 "#9B9055")
+        (alpha-pound1 "#406082")
+        (alpha-pound2 "#2367B5")
+        (alpha-pound-1 "#5C514E")
+        (alpha-pound-2 "#824540")
+
+        (beta "#2e8b57")
+        (beta-comp1 "#0E3E24")
+        (beta-comp2 "#5DD795")
+        (beta-comp-1 "#3E0D08")
+        (beta-comp-2 "#8B372E")
+        (beta-triad1 "#0E3E25")
+        (beta-triad2 "#794198")
+        (beta-triad-1 "#584114")
+        (beta-triad-2 "#D7A23D")
+        (beta-pound1 "#2CB7BE")
+        (beta-pound2 "#B0EEF1")
+        (beta-pound-1 "#985861")
+        (beta-pound-2 "#BE2C8A"))
     (color-theme-install
      `(color-theme-actress
        ((background-color . ,bg)
         (background-mode . dark)
         (border-color . ,bg)
-        (cursor-color . ,olive)
+        (cursor-color . ,alpha-triad-1)
         (foreground-color . ,fg))
 
        (default ((t (:stipple nil
@@ -101,33 +118,38 @@
 
        (css-property ((t (:foreground "#0086b3"))));
        (css-selector ((t (:foreground "#990000"))));
-                                        ;     (cursor ((t (:background "#a7a7a7"))));
 
-       (font-lock-builtin-face ((t (:foreground ,builtin))))
+       (c-annotation-face ((t (:foreground ,alpha-pound2))))
+       
+       ;; font lock
+       ;;
+       (font-lock-builtin-face ((t (:foreground ,alpha-comp2))))
        (font-lock-comment-delimiter-face ((t (:italic t
                                                       :slant italic
-                                                      :foreground ,secondary))))
-       (font-lock-comment-face ((t (:italic t :foreground ,secondary :slant italic))))
-
-;     (font-lock-constant-face ((t (:foreground "#990073"))));
+                                                      :foreground ,alpha))))
+       (font-lock-comment-face ((t (:italic t
+                                            :foreground ,alpha
+                                            :slant italic))))
+       (font-lock-constant-face ((t (:foreground ,alpha-comp2 :bold t))))
 ;     (font-lock-doc-face ((t (:foreground "#dd1144"))));
+       (font-lock-function-name-face ((t (:foreground ,beta-comp-2))))
+       (font-lock-keyword-face ((t (:foreground ,alpha-comp2))))
+; font-lock-negation-char-face
+; font-lock-preprocessor-face
+; font-lock-reference-face
+       (font-lock-string-face ((t (:foreground ,beta))))
+       (font-lock-type-face ((t (:foreground ,beta-comp1))))
+       (font-lock-variable-name-face ((t (:foreground ,alpha-triad-1))))
+       (font-lock-warning-face ((t (:bold t :foreground ,beta-triad2))))
 
-       (font-lock-function-name-face ((t (:foreground ,function))))
-       (font-lock-keyword-face ((t (:bold t
-                                          :weight bold
-                                          :foreground ,keyword))))
-       (font-lock-warning-face ((t (:foreground ,warning))))
-       (font-lock-string-face ((t (:foreground ,string))))
-       (font-lock-type-face ((t (:foreground ,type))))
-       (font-lock-variable-name-face ((t (:foreground ,variable))))
-
-       (fringe ((t (:foreground ,secondary :background ,bg-hi))))
+       
+       (fringe ((t (:foreground ,alpha :background ,bg-hi))))
        
        (trailing-whitespace ((t (:background "grey9"))))
        
        (highlight ((t (:background ,bg-hi))))
-       (modeline ((t (:background ,bg-hi2 :foreground ,olive))))
-       (minibuffer-prompt ((t (:foreground ,secondary))))
+       (modeline ((t (:background ,bg-hi2 :foreground ,alpha-triad-1))))
+       (minibuffer-prompt ((t (:foreground ,fg))))
 
        (link ((t (:foreground "blue1" :underline t))))
        (link-visited ((t (:underline t :foreground "magenta4"))))
@@ -136,7 +158,7 @@
        (region ((t (:background "MidnightBlue"))))
        
        (show-paren-match ((t (:background ,bg-hi :foreground ,fg-hi))))
-       (show-paren-mismatch ((t (:background err))))))))
+       (show-paren-mismatch ((t (:background ,beta-pound-2))))))))
 
 ;;(add-to-list 'color-themes '(color-theme-actress  "Actress" "Inderjit Gill"))
 
