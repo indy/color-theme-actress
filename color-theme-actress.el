@@ -111,12 +111,8 @@
                                             :foreground ,alpha
                                             :slant italic))))
        (font-lock-constant-face ((t (:foreground ,alpha-comp2 :bold t))))
-;     (font-lock-doc-face ((t (:foreground "#dd1144"))));
        (font-lock-function-name-face ((t (:foreground ,beta-comp-2))))
        (font-lock-keyword-face ((t (:foreground ,alpha-comp2))))
-; font-lock-negation-char-face
-; font-lock-preprocessor-face
-; font-lock-reference-face
        (font-lock-string-face ((t (:foreground ,beta))))
        (font-lock-type-face ((t (:foreground ,beta-comp2))))
        (font-lock-variable-name-face ((t (:foreground ,alpha-triad-1))))
