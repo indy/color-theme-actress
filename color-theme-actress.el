@@ -39,6 +39,8 @@
 ;; color theme (requires http://www.emacswiki.org/cgi-bin/wiki?ColorTheme )
 (require 'color-theme)
 
+(setq actress-paren-face "magenta4")
+
 (defun color-theme-actress ()
   "Actress color theme for GNU Emacs."
   (interactive)
