@@ -1,11 +1,11 @@
-;;; color-theme-actress.el --- A dark color theme for GNU Emacs.
+;;; color-theme-actress.el --- The greatest emacs colour theme of all time
 
 ;; Copyright (C) 2011 Inderjit Gill <email@indy.io>
 
 ;; Author: Inderjit Gill
 ;; Keywords: dark color theme
 ;; URL: http://github.com/indy/color-theme-actress
-;; Version: 0.1.0
+;; Version: 0.2.1
 ;; Package-Requires: ((color-theme "6.6.1"))
 
 ;; This file is not a part of GNU Emacs.
@@ -148,6 +148,11 @@
      (set-face-foreground 'magit-diff-add "#0E3E24")
      (set-face-foreground 'magit-diff-del "#8B372E")
      (set-face-background 'magit-item-highlight "#111111")))
+
+(eval-after-load 'yasnippet
+  '(progn
+     (set-face-foreground 'yas/field-highlight-face "#ffffff")
+     (set-face-background 'yas/field-highlight-face "#333333")))
 
 ;;(add-to-list 'color-themes '(color-theme-actress  "Actress" "Inderjit Gill"))
 
