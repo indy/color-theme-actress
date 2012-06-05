@@ -1,11 +1,11 @@
-;;; color-theme-actress.el --- The greatest emacs colour theme of all time
+;;; color-theme-actress.el --- A dark color theme for GNU Emacs.
 
 ;; Copyright (C) 2011 Inderjit Gill <email@indy.io>
 
 ;; Author: Inderjit Gill
 ;; Keywords: dark color theme
 ;; URL: http://github.com/indy/color-theme-actress
-;; Version: 0.2.1
+;; Version: 0.2.2
 ;; Package-Requires: ((color-theme "6.6.1"))
 
 ;; This file is not a part of GNU Emacs.
@@ -39,14 +39,13 @@
 ;; color theme (requires http://www.emacswiki.org/cgi-bin/wiki?ColorTheme )
 (require 'color-theme)
 
-(setq actress-paren-face "magenta4")
-
 (defun color-theme-actress ()
   "Actress color theme for GNU Emacs."
   (interactive)
-  (let ((bg "#000000")        ; default background
-        (bg-hi "#111111")     ; default background-highlighted
-        (bg-hi2 "#333333")    ; default background-extra-highlighted
+  (let ((bg "#181916")        ; default background
+        (bg-fringe "#121310")
+        (bg-hi "#000000")     ; default background-highlighted
+        (bg-hi2 "#383830")    ; default background-extra-highlighted
         (fg "#999999")        ; default foreground
         (fg-hi "#ffffff")     ; default foreground-highlighted
 
@@ -121,7 +120,7 @@
        (font-lock-warning-face ((t (:bold t :foreground ,beta-triad2))))
 
        
-       (fringe ((t (:foreground ,alpha :background ,bg-hi))))
+       (fringe ((t (:foreground ,alpha :background ,bg-fringe))))
        
        (trailing-whitespace ((t (:background "grey9"))))
        
