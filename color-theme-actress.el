@@ -128,7 +128,7 @@
        (modeline ((t (:background ,bg-hi2 :foreground ,alpha-triad-1))))
        (minibuffer-prompt ((t (:foreground ,fg))))
 
-       (link ((t (:foreground "blue1" :underline t))))
+       (link ((t (:foreground "SteelBlue" :underline t))))
        (link-visited ((t (:underline t :foreground "magenta4"))))
 
        (secondary-selection ((t (:background "dodger blue"))))
