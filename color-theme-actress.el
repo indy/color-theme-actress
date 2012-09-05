@@ -150,8 +150,8 @@
 
 (eval-after-load 'yasnippet
   '(progn
-     (set-face-foreground 'yas/field-highlight-face "#ffffff")
-     (set-face-background 'yas/field-highlight-face "#333333")))
+     (set-face-foreground 'yas-field-highlight-face "#ffffff")
+     (set-face-background 'yas-field-highlight-face "#333333")))
 
 ;;(add-to-list 'color-themes '(color-theme-actress  "Actress" "Inderjit Gill"))
 
